@@ -995,7 +995,6 @@ function getPseudoMoves(
 /* =====================================
    ADD NORMAL MOVE
 ===================================== */
-
 function addMoveIfValid(
     row,
     col,
@@ -1006,24 +1005,12 @@ function addMoveIfValid(
     moves
 ) {
 
-    if (!insideBoard(newRow, newCol)) {
-        return;
-    }
-
-    const target = currentBoard[newRow][newCol];
-
-    if (!target || target[0] !== color) {
-
-        moves.push({
-            row: newRow,
-            col: newCol
-        });
-
-    }
-
-}
-
-
+    if (
+        !insideBoard(
+            newRow,
+            newCol
+        )
+    ) {
 /* =====================================
    SLIDING PIECES
 ===================================== */

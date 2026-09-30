@@ -992,7 +992,6 @@ function getPseudoMoves(
 
 }
 
-
 /* =====================================
    ADD NORMAL MOVE
 ===================================== */
@@ -1006,35 +1005,14 @@ function addMoveIfValid(
     currentBoard,
     moves
 ) {
-    row,
-    col,
-    newRow,
-    newCol,
-    color,
-    currentBoard,
-    moves
-) {
 
-    if (
-        !insideBoard(
-            newRow,
-            newCol
-        )
-    ) {
-
+    if (!insideBoard(newRow, newCol)) {
         return;
-
     }
 
+    const target = currentBoard[newRow][newCol];
 
-    const target =
-        currentBoard[newRow][newCol];
-
-
-    if (
-        !target ||
-        target[0] !== color
-    ) {
+    if (!target || target[0] !== color) {
 
         moves.push({
             row: newRow,

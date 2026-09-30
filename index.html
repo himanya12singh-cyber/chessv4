@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Chess</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation -->
+    <header class="top-bar">
+        <div class="logo">
+            ♟ Simple Chess
+        </div>
+
+        <button id="restartBtn" class="restart-btn">
+            Restart
+        </button>
+    </header>
+
+
+    <!-- Main Game -->
+    <main class="game-container">
+
+        <!-- Left Side -->
+        <section class="game-area">
+
+            <div class="player-info">
+                <span>Black</span>
+                <span id="turnText">White's turn</span>
+            </div>
+
+            <!-- Chessboard -->
+            <div id="board" class="chess-board"></div>
+
+            <div class="player-info bottom-player">
+                <span>White</span>
+                <span id="statusText">Game in progress</span>
+            </div>
+
+        </section>
+
+
+        <!-- Right Side -->
+        <aside class="side-panel">
+
+            <div class="panel-card">
+
+                <h2>Game</h2>
+
+                <div class="difficulty">
+                    <p>Opponent</p>
+
+                    <div class="difficulty-buttons">
+                        <button class="difficulty-btn active">
+                            Beginner
+                        </button>
+
+                        <button class="difficulty-btn">
+                            Intermediate
+                        </button>
+
+                        <button class="difficulty-btn">
+                            Expert
+                        </button>
+
+                        <button class="difficulty-btn">
+                            Master
+                        </button>
+
+                        <button class="difficulty-btn">
+                            Grandmaster
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="panel-card">
+
+                <h2>Move History</h2>
+
+                <div id="moveHistory" class="move-history">
+                    <p class="empty-history">
+                        No moves yet
+                    </p>
+                </div>
+
+            </div>
+
+
+            <button id="newGameBtn" class="new-game-btn">
+                New Game
+            </button>
+
+        </aside>
+
+    </main>
+
+
+    <!-- Promotion Popup -->
+    <div id="promotionModal" class="modal hidden">
+
+        <div class="promotion-box">
+
+            <h2>Choose a piece</h2>
+
+            <div class="promotion-options">
+
+                <button data-piece="q">♕</button>
+                <button data-piece="r">♖</button>
+                <button data-piece="b">♗</button>
+                <button data-piece="n">♘</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
